@@ -5,8 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
-    <h1>Este é meu site</h1>
-  </body>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+      }
+      .container {
+          background-color: white;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
+      button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      button:hover {
+          background-color: #45a049;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <h1>Bem-vindo à Minha Aplicação</h1>
+      <p id="mensagem">Clique no botão para ver uma mensagem</p>
+      <button onclick="mostrarMensagem()">Clique aqui</button>
+  </div>
+  <script>
+      function mostrarMensagem() {
+          document.getElementById('mensagem').textContent = 'Olá, esta é a sua mensagem!';
+      }
+  </script>
+</body>
 </html>
